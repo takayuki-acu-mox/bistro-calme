@@ -19,19 +19,14 @@
 
 						<div class="article_body">
 							<div class="content">
-								<p>BISTRO CALME では、新しいメニューを開発中です。</p>
-								<p>
-									新しいメニューを提供するために、開店後に練習中です。スタッフから大好評のメニューもできてきました。<br>
-									来月にはご提供できると思います。お楽しみに。
-								</p>
+								<?php the_content(); ?>
 							</div>
 						</div>
 
 						<div class="postLinks">
-							<div class="postLink postLink-prev"><a href="#"><i
-										class="fas fa-chevron-left"></i>前の記事のタイトル</a></div>
-							<div class="postLink postLink-next"><a href="#">次の記事のタイトル<i
-										class="fas fa-chevron-right"></i></a></div>
+							<div class="postLink postLink-prev"><?php previous_post_link('<i class="fas fa-chevron-left"></i>%link'); ?>
+						</div>
+							<div class="postLink postLink-next"><?php next_post_link('%link<i class="fas fa-chevron-right"></i>'); ?></div>
 						</div>
 					</article>
 					<?php endwhile; ?>
